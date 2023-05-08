@@ -1,6 +1,6 @@
 <%= form_with(url: search_path, method: :post, class: "w-60", data: {
   controller: "search",
-  action: "key->search#suggestions",
+  action: "keyup->search#suggestions",
   suggestions_url: search_suggestions_path,
 }) do |f| %>
   <div class="relative">
