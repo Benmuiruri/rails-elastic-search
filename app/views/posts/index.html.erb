@@ -1,14 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1 class="text-4xl text-center mt-5 mb-4">Posts</h1>
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
+<div class="flex justify-center">
+  <%= render partial: "search/form", locals: { results: [] } %>
+</div>
+
+<div id="posts" class="mt-4 mx-10">
+  <%= render "posts/posts", posts: @posts %>
 </div>
 
 <%= link_to "New post", new_post_path %>

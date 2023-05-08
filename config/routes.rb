@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :posts
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root 'posts#index'
+  post 'search', to: 'search#search', as: 'search'
+  post 'search/suggestions', to: 'search#suggestions', as: 'search_suggestions'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :posts
 end
